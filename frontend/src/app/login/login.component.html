@@ -1,0 +1,46 @@
+<body>
+    <div id="login-card-div">
+        <mat-card class="login-card" appearance="outlined">
+            <div  id="logo-img-div">
+                <img mat-card-image id="logoImg" src="./../../assets/pumpkinLogo.jpg" alt="pumpkinLogo">
+            </div>
+            <br>
+            <mat-card-content >
+                <div class="main-div">
+                    <form [formGroup]="loginForm" class="login-form">
+                        <mat-form-field class="custom-color">
+                            <mat-label for="username">USERNAME</mat-label>
+                            <input type="text" class="form-control" formControlName="username" id="user_name" matInput>
+                            <mat-error *ngIf="hasError('username', 'required')">Username is required!</mat-error>
+                            <mat-icon matSuffix>person_outline</mat-icon>
+                        </mat-form-field>
+
+                        <br>
+                        
+                        <mat-form-field class="custom-color">
+                            <mat-label>PASSWORD</mat-label>
+                            <input matInput class="form-control" formControlName="password" id="password" [type]="hide() ? 'password' : 'text'" />
+                            <mat-error *ngIf="hasError('password', 'required')">Password is required!</mat-error>
+                            <button
+                              mat-icon-button
+                              matSuffix
+                              (click)="clickEvent($event)"
+                              [attr.aria-label]="'Hide password'"
+                              [attr.aria-pressed]="hide()"
+                            >
+                              <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+
+                        <br>
+                        <br>
+                        <div id="login_button_div">
+                            <button mat-raised-button type="submit" id="login_button" (click)="login()"
+                            [disabled]="loginForm.invalid">SIGN IN</button>
+                        </div>
+                    </form>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</body>

@@ -1,0 +1,77 @@
+body{
+    background-color: #cd9888;
+    margin: 0;
+    padding: 0;
+    font-family: 'Goudy Old Style', serif;     
+    font-size: 13px;
+}
+
+#login-card-div{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 80vh;           /* Make the container full height of the viewport */
+    margin: 0;
+}
+
+.login-card{
+    width: 600px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff; /* Light gray border */
+    padding: 16px; /* Add padding inside the card */
+}
+
+
+#logo-img-div{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    margin: 0;
+}
+
+#logoImg{
+    width: 200px;
+    height: 150px;
+}
+
+mat-form-field{
+    color: #cd9888;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+
+  ::ng-deep .custom-color .mat-form-field-label {
+    color: #cd9888 !important;
+}
+
+::ng-deep .custom-color .mat-form-field-underline {
+    background-color: #cd9888 !important;
+}
+
+::ng-deep .custom-color .mat-form-field-prefix .mat-icon,
+::ng-deep .custom-color .mat-form-field-suffix .mat-icon {
+    color: #cd9888 !important;
+}
+
+::ng-deep .custom-color .mat-form-field-subscript {
+    color: #cd9888 !important;
+}
+
+::ng-deep .custom-color .mat-error {
+    color: #cd9888 !important;
+}
+
+#login_button_div{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     
+    margin: 0;
+}
+
+#login_button{
+    background-color: #cd9888;
+    text-align: center;
+    color: whitesmoke; 
+  }
